@@ -1,5 +1,5 @@
-# project-EAP
-Project Partial 1
+# Proyecto Angular "Adopta un árbol"
+Proyecto de Angular, Primer Parcial
 
 ## Miembros del Equipo:
 * Frida Bonilla
