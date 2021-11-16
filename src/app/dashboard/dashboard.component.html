@@ -14,8 +14,8 @@
     <div class="col-lg-4">
       <div class="card card-chart">
         <div class="card-header">
-          <h5 class="card-category">Global Sales</h5>
-          <h4 class="card-title">Shipped Products</h4>
+          <h5 class="card-category">Mapa Interactivo</h5>
+          <h4 class="card-title">Árboles plantados</h4>
           <div ngbDropdown>
             <button type="button" class="btn btn-round btn-default dropdown-toggle btn-simple btn-icon no-caret" ngbDropdownToggle>
               <i class="now-ui-icons loader_gear"></i>
@@ -30,14 +30,15 @@
         </div>
         <div class="card-body">
           <div class="chart-area">
-            <canvas baseChart id="lineChartExample"
+            <div id="map" class="map"></div>
+            <!-- <canvas baseChart id="lineChartExample"
                         [datasets]="lineChartData"
                         [labels]="lineChartLabels"
                         [colors]="lineChartColors"
                         [options]="lineChartOptions"
                         [chartType]="lineChartType"
                         (chartHover)="chartHovered($event)"
-                        (chartClick)="chartClicked($event)"></canvas>
+                        (chartClick)="chartClicked($event)"></canvas> -->
           </div>
         </div>
         <div class="card-footer">
@@ -50,8 +51,9 @@
     <div class="col-lg-4 col-md-6">
       <div class="card card-chart">
         <div class="card-header">
-          <h5 class="card-category">2018 Sales</h5>
-          <h4 class="card-title">All products</h4>
+          <h5 class="card-category">Adopta un árbol</h5>
+          <h4 class="card-title">¡Ayuda a tu ciudad hoy!</h4>
+          
           <div ngbDropdown>
             <button type="button" class="btn btn-round btn-default dropdown-toggle btn-simple btn-icon no-caret" ngbDropdownToggle>
               <i class="now-ui-icons loader_gear"></i>
@@ -66,17 +68,11 @@
         </div>
         <div class="card-body">
           <div class="chart-area">
-            <!-- <canvas id="lineChartExampleWithNumbersAndGrid"></canvas> -->
-            <canvas baseChart id="lineChartExampleWithNumbersAndGrid"
-                        [datasets]="lineChartWithNumbersAndGridData"
-                        [labels]="lineChartWithNumbersAndGridLabels"
-                        [colors]="lineChartWithNumbersAndGridColors"
-                        [options]="lineChartWithNumbersAndGridOptions"
-                        [chartType]="lineChartWithNumbersAndGridType"
-                        (chartHover)="chartHovered($event)"
-                        (chartClick)="chartClicked($event)"></canvas>
+            <div class="btn-danger px-4 py-2 text-center" style="border-radius: 25px;"><a href="https://www.proyecto25.org/adopta-un-arbol/" class="text-white">¡Quiero adoptar!</a></div>
           </div>
+          
         </div>
+        
         <div class="card-footer">
           <div class="stats">
             <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
@@ -87,19 +83,32 @@
     <div class="col-lg-4 col-md-6">
       <div class="card card-chart">
         <div class="card-header">
-          <h5 class="card-category">Email Statistics</h5>
-          <h4 class="card-title">24 Hours Performance</h4>
+          <h5 class="card-category">Notificaciones de Árboles</h5>
+          <h4 class="card-title">Estado de los árboles</h4>
         </div>
         <div class="card-body">
           <div class="chart-area">
-            <canvas baseChart id="barChartSimpleGradientsNumbers"
-                        [datasets]="lineChartGradientsNumbersData"
-                        [labels]="lineChartGradientsNumbersLabels"
-                        [colors]="lineChartGradientsNumbersColors"
-                        [options]="lineChartGradientsNumbersOptions"
-                        [chartType]="lineChartGradientsNumbersType"
-                        (chartHover)="chartHovered($event)"
-                        (chartClick)="chartClicked($event)"></canvas>
+            <div class="alert alert-primary">
+              <button type="button" aria-hidden="true" class="close">
+                <i class="now-ui-icons ui-1_simple-remove"></i>
+              </button>
+              <span>
+                <b> Primary - </b> This is a regular notification made with ".alert-primary"</span>
+            </div>
+            <div class="alert alert-info">
+              <button type="button" aria-hidden="true" class="close">
+                <i class="now-ui-icons ui-1_simple-remove"></i>
+              </button>
+              <span>
+                <b> Info - </b> This is a regular notification made with ".alert-info"</span>
+            </div>
+            <div class="alert alert-success">
+              <button type="button" aria-hidden="true" class="close">
+                <i class="now-ui-icons ui-1_simple-remove"></i>
+              </button>
+              <span>
+                <b> Success - </b> This is a regular notification made with ".alert-success"</span>
+            </div>
           </div>
         </div>
         <div class="card-footer">
@@ -111,11 +120,64 @@
     </div>
   </div>
   <div class="row">
+    <div class="col-lg-4">
+      <div class="card card-chart">
+        <div class="card-header">
+          <h5 class="card-category">¿Cómo adoptar?</h5>
+          <h4 class="card-title">Paso 1</h4>
+        </div>
+        <div class="card-body">
+          <h3>¡Regístrate a la iniciativa!</h3>
+          <p class="">Como habrás notado, nos importa mucho colocar a la especie correcta en el lugar correcto. Por ello, primero nos deberás de contar un poco del sitio en dónde colocarás tu árbol en un registro.</p>
+        </div>
+        <div class="card-footer">
+          <div class="stats">
+            <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card card-chart">
+        <div class="card-header">
+          <h5 class="card-category">¿Cómo adoptar?</h5>
+          <h4 class="card-title">Paso 2</h4>
+        </div>
+        <div class="card-body">
+          <h3>Elegimos tu árbol</h3>
+          <p class="">Nuestro equipo revisará tu registro y dictará si es el árbol adecuado para el sitio donde lo colocarás. En caso de que cumpla con los requisitos, te contactáremos para entregarte tu árbol.</p>
+        </div>
+        <div class="card-footer">
+          <div class="stats">
+            <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card card-chart">
+        <div class="card-header">
+          <h5 class="card-category">¿Cómo adoptar?</h5>
+          <h4 class="card-title">Paso 3</h4>
+        </div>
+        <div class="card-body">
+          <h3>Inicia tu compromiso</h3>
+          <p class="">Tú plantarás el árbol, serás la persona encargada de cuidarlo y enviar evidencias de su crecimiento cada 3 meses.</p>
+        </div>
+        <div class="card-footer">
+          <div class="stats">
+            <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-md-6">
       <div class="card  card-tasks">
         <div class="card-header ">
-          <h5 class="card-category">Backend development</h5>
-          <h4 class="card-title">Tasks</h4>
+          <h5 class="card-category">Administración de Usuarios</h5>
+          <h4 class="card-title">Usuarios</h4>
         </div>
         <div class="card-body ">
           <div class="table-full-width table-responsive">
@@ -130,7 +192,7 @@
                       </label>
                     </div>
                   </td>
-                  <td class="text-left">Sign contract for "What are conference organizers afraid of?"</td>
+                  <td class="text-left">Usuario 1</td>
                   <td class="td-actions text-right">
                     <button type="button" rel="tooltip" title="" class="btn btn-info btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Edit Task">
                       <i class="now-ui-icons ui-2_settings-90"></i>
@@ -149,7 +211,7 @@
                       </label>
                     </div>
                   </td>
-                  <td class="text-left">Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+                  <td class="text-left">Usuario 2</td>
                   <td class="td-actions text-right">
                     <button type="button" rel="tooltip" title="" class="btn btn-info btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Edit Task">
                       <i class="now-ui-icons ui-2_settings-90"></i>
@@ -168,7 +230,7 @@
                       </label>
                     </div>
                   </td>
-                  <td class="text-left">Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+                  <td class="text-left">Usuario 3
                   </td>
                   <td class="td-actions text-right">
                     <button type="button" rel="tooltip" title="" class="btn btn-info btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Edit Task">
@@ -194,24 +256,27 @@
     <div class="col-md-6">
       <div class="card">
         <div class="card-header">
-          <h5 class="card-category">All Persons List</h5>
-          <h4 class="card-title"> Employees Stats</h4>
+          <h5 class="card-category">Base de Datos de Árboles</h5>
+          <h4 class="card-title"> Árboles del Mes</h4>
         </div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table">
               <thead class=" text-primary">
                 <th>
-                  Name
+                  Especie
                 </th>
                 <th>
-                  Country
+                  Altura
                 </th>
                 <th>
-                  City
+                  Ubicación
+                </th>
+                <th class="">
+                  Estado
                 </th>
                 <th class="text-right">
-                  Salary
+                  Fecha de plantación
                 </th>
               </thead>
               <tbody>
@@ -224,6 +289,9 @@
                   </td>
                   <td>
                     Oud-Turnhout
+                  </td>
+                  <td>
+                    Feldkirchen in Kärnten
                   </td>
                   <td class="text-right">
                     $36,738
@@ -239,6 +307,9 @@
                   <td>
                     Sinaai-Waas
                   </td>
+                  <td>
+                    Feldkirchen in Kärnten
+                  </td>
                   <td class="text-right">
                     $23,789
                   </td>
@@ -253,6 +324,9 @@
                   <td>
                     Baileux
                   </td>
+                  <td>
+                    Feldkirchen in Kärnten
+                  </td>
                   <td class="text-right">
                     $56,142
                   </td>
@@ -263,6 +337,9 @@
                   </td>
                   <td>
                     Malawi
+                  </td>
+                  <td>
+                    Feldkirchen in Kärnten
                   </td>
                   <td>
                     Feldkirchen in Kärnten
@@ -280,6 +357,9 @@
                   </td>
                   <td>
                     Gloucester
+                  </td>
+                  <td>
+                    Feldkirchen in Kärnten
                   </td>
                   <td class="text-right">
                     $78,615
